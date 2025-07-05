@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
+  <title>Alaedine Benani D.</title>
   <!-- LaTeX.css main stylesheet -->
   <link rel="stylesheet" href="https://latex.vercel.app/style.css">
   <!-- Optional: Prism for syntax highlighting -->
@@ -12,7 +12,7 @@
 </head>
 <body class="latex-dark-auto text-justify">
   <header>
-    <p class="author">Your Name <br> July 5, 2025</p>
+    <p class="author">Alaedine Benani D. <span id="visit-date"></span></p>
     <div class="abstract">
       <h2>Abstract</h2>
       <p>
@@ -83,5 +83,13 @@
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <!-- Optional: Prism for syntax highlighting -->
   <script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script>
+  <!-- Script to display today's date -->
+  <script>
+    // Format date as "Month Day, Year"
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    const today = new Date();
+    document.getElementById('visit-date').textContent = today.toLocaleDateString(undefined, options);
+  </script>
+
 </body>
 </html>
