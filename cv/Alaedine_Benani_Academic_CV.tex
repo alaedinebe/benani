@@ -1,0 +1,208 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage{fontspec}
+\setmainfont{texgyretermes}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Ligatures=TeX]
+\setsansfont{texgyreheros}[Extension=.otf,UprightFont=*-regular,BoldFont=*-bold,ItalicFont=*-italic,BoldItalicFont=*-bolditalic,Scale=0.9,Ligatures=TeX]
+\usepackage{needspace}
+\usepackage[letterpaper,top=0.75in,bottom=0.8in,left=0.75in,right=0.75in,headsep=12pt,footskip=26pt]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{tabularx}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\definecolor{accent}{HTML}{20405F}
+\definecolor{muted}{HTML}{59636D}
+\definecolor{rulec}{HTML}{9AA5AF}
+
+\hypersetup{
+  pdftitle={Alaedine Benani - Academic Curriculum Vitae},
+  pdfauthor={Alaedine Benani},
+  pdfsubject={Clinical machine learning and cardiovascular prevention},
+  pdfkeywords={Alaedine Benani, curriculum vitae, machine learning, vascular medicine, cardiovascular prevention},
+  colorlinks=true, urlcolor=accent, linkcolor=accent
+}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\renewcommand{\baselinestretch}{1.06}
+
+\newcommand{\cvdate}{November 2026}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[L]{\sffamily\footnotesize\color{muted}Alaedine Benani}
+\fancyhead[R]{\sffamily\footnotesize\color{muted}Academic Curriculum Vitae}
+\fancyfoot[L]{\sffamily\footnotesize\color{muted}\cvdate}
+\fancyfoot[R]{\sffamily\footnotesize\color{muted}\thepage\ / \pageref{LastPage}}
+\fancypagestyle{first}{\fancyhf{}%
+  \fancyfoot[L]{\sffamily\footnotesize\color{muted}\cvdate}%
+  \fancyfoot[R]{\sffamily\footnotesize\color{muted}\thepage\ / \pageref{LastPage}}}
+
+\titleformat{\section}{\needspace{5\baselineskip}\sffamily\bfseries\large\color{accent}}{}{0pt}{}[\vspace{3pt}{\color{rulec}\titlerule[0.5pt]}]
+\titlespacing*{\section}{0pt}{14pt}{8pt}
+\titleformat{\subsection}{\sffamily\bfseries\normalsize\color{accent}}{}{0pt}{}
+\titlespacing*{\subsection}{0pt}{9pt}{4pt}
+
+% Entry: title, date, then body
+\newcommand{\entry}[2]{\par\vspace{5pt}\noindent\textbf{#1}\hfill{\sffamily\small\color{muted}#2}\par\vspace{1pt}}
+% Presentation line
+\newcommand{\pres}[3]{\par\vspace{3pt}\noindent\textbf{#1}\quad #2\par{\small\color{muted}#3}\par}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi: #1}}
+\newcommand{\me}{\textbf{Benani A}}
+
+\setlist[itemize]{leftmargin=1.2em,itemsep=1pt,topsep=2pt,label=\textbullet}
+\newlist{pubs}{enumerate}{1}
+\setlist[pubs]{label=\arabic*.,leftmargin=2em,itemsep=5pt,topsep=4pt}
+
+\begin{document}
+\fontsize{10.5}{13.2}\selectfont
+\thispagestyle{first}
+
+{\fontsize{24}{28}\selectfont\bfseries Alaedine Benani}\hspace{8pt}{\large MD, MSc}\par
+\vspace{3pt}
+{\sffamily\color{accent}Clinical Machine Learning \enspace|\enspace Cardiovascular Prevention}\par
+\vspace{2pt}
+Paris, France \enspace|\enspace \href{mailto:alaedine.benani@aphp.fr}{alaedine.benani@aphp.fr} \enspace|\enspace +33 6 74 38 12 39\par
+\vspace{2pt}
+{\small\href{https://alaedinebe.github.io/benani/}{Academic website} \enspace|\enspace \href{https://orcid.org/0009-0007-4415-1096}{ORCID: 0009-0007-4415-1096} \enspace|\enspace \href{https://scholar.google.com/citations?user=om31gMwAAAAJ}{Google Scholar} \enspace|\enspace \href{https://www.linkedin.com/in/alaedine}{LinkedIn} \enspace|\enspace \href{https://github.com/alaedinebe}{GitHub}}\par
+
+\section{Research Focus}
+Physician and PhD candidate working on machine learning for cardiovascular prevention and clinical decision support. Research integrates multimodal modeling, synthetic clinical data and evidence synthesis, with particular attention to model interpretability, prescribing variability and rigorous evaluation.
+
+\section{Education and Clinical Training}
+\entry{PhD candidate, Machine Learning for Clinical Decision Support}{2024--present}
+Sorbonne Université, LIMICS, Inserm, Paris, France. Expected completion: May 2027.\\
+Research with Prof.\ Xavier Tannier, in partnership with Zoī and AP-HP.
+\entry{Doctor of Medicine (MD)}{June 2026}
+Medical training at Université Toulouse III -- Paul Sabatier and Université Paris Cité.\\
+Dual medicine-science curriculum, including the Inserm Liliane Bettencourt School.
+\entry{Residency in Vascular Medicine}{2022--present}
+Université Paris Cité; Assistance Publique -- Hôpitaux de Paris (AP-HP).\\
+Clinical rotations (November 2022--May 2024) in cardiovascular rehabilitation, inpatient care, vascular investigations and day hospital; research leave since May 2024.
+\entry{Master 2 (MSc), Biomedical Engineering}{2018--2019}
+Université Paris-Saclay / École Polytechnique / HEC Paris, France.\\
+Training in machine learning, technological innovation and entrepreneurship; research internship at Owkin.
+
+\section{Research and Professional Experience}
+\entry{Machine Learning Researcher and Doctoral Researcher}{May 2024--present}
+LIMICS (Sorbonne Université / Inserm) and Zoī, Paris; CIFRE doctoral partnership.
+\begin{itemize}
+  \item Model cardiovascular prevention prescriptions using real, synthetic and hybrid clinical datasets; first-author study with cross-validation and held-out evaluation.
+  \item Lead a systematic review comparing multimodal and unimodal models across 97 studies and 12 specialties, including PROBAST risk-of-bias assessment (preprint).
+  \item Study within- and between-physician prescribing variability and its implications for model evaluation.
+  \item Contribute to the Zoī prospective cohort: published profile of the first 1,000 participants, with 196 biomarkers, over 500 self-reported items and multimodal imaging.
+\end{itemize}
+\entry{Medical Project Manager / Data Consultant}{April 2020--February 2024}
+Synapse Medicine and independent collaborations, including Raidium. Contributed to Goodmed, Synapse Pro, the Synapse Copilot knowledge base and medical question-answering research (ClinicalNLP 2024).
+\entry{Data Scientist Intern}{July--September 2019}
+Owkin, Paris, France. Master's research internship in machine learning for CT image analysis within the radiology team.
+
+\section{Publications}
+{\small\color{muted}Name in bold. Articles published in French are marked.}
+
+\subsection{Journal Articles and Reviews}
+\begin{pubs}
+\item Julian A, Lepoittevin M, Balia M, \me, Mounier M, Salomon J, Bodard S. Applicability of cognitive decline risk scores in a high socioeconomic preventive medicine cohort. \textit{Journal of Alzheimer's Disease}. Published online November 6, 2026. \doi{10.1177/13872877261503163}.
+\item Lepoittevin M, Bauvin P, \me, Attias P, Steg PG, Vidal-Petiot E, Bodard S. Impact of the new 2024 ESC blood pressure classification in a low-risk cohort: the 70 mmHg diastolic threshold may reduce risk discrimination in primary prevention. \textit{Journal of Hypertension}. 2026;44(11):2041--2049. \doi{10.1097/HJH.0000000000004434}.
+\item Balia M, Zenasni F, Lepoittevin M, \me, Bianchi R, Julian A, Bodard S, Bringer M. Biological Markers of Burnout Severity: A Systematic Review. \textit{Stress and Health}. 2026;42(4):e70205. \doi{10.1002/smi.70205}.
+\item Bauvin P, \me, Lepoittevin M, Sentilhes M, Bringer M, Lecheheb DA, De Luca N, Ohayon S, Dalle C, Tannier X, Steg PG, Bodard S. Zoī cohort, a prospective cohort with comprehensive phenotyping for preventive medicine in France, first 1000 participants: cohort profile. \textit{BMJ Open}. 2026;16(5):e111119. \doi{10.1136/bmjopen-2025-111119}.
+\item Bodard S, Segui P, Poirier F, Bauvin P, Lepoittevin M, \me, Mounier M, Herpe G, Tacher V. Feasibility of Latest-Generation Cone-Beam CT for Thoracic Imaging: A Pilot Study. \textit{Academic Radiology}. 2026;33(5):2257--2269. \doi{10.1016/j.acra.2025.12.029}.
+\item Bodard S, \me, Lepoittevin M, Vibert J, Cornelis FH. Robotics in oncologic interventional radiology: from technological innovation to personalized medicine. \textit{Médecine/Sciences}. 2026;42(2):201--204. [In French.] \doi{10.1051/medsci/2026002}.
+\item Lepoittevin M, Greig J, Erol O, \me, Bauvin P, Azzolini C, Donati S, Dubois B, Boscher C, Bodard S. Retinal biomarkers for early Alzheimer's detection: a systematic review of optical coherence tomography (OCT) findings. \textit{BMJ Open Ophthalmology}. 2026;11(1):e002328. \doi{10.1136/bmjophth-2025-002328}.
+\item \me, Vibert J, Demuth S. Synthetic data in medicine: Generation, evaluation and limits. \textit{Médecine/Sciences}. 2024;40(8--9):661--664. [In French.] \doi{10.1051/medsci/2024091}.
+\end{pubs}
+
+\subsection{Conference Proceedings}
+\begin{pubs}[resume]
+\item \me, Grosgeorge D, Bauvin P, Ohayon S, Bodard S, Messas E, Tannier X. Machine Learning for Cardiovascular Prevention Prescriptions: Real-World vs.\ Synthetic Data. \textit{Studies in Health Technology and Informatics}. 2026;336:363--367. \doi{10.3233/SHTI260178}.
+\item Khlaut J, Dancette C, Ferreres E, \textbf{Bennani A}, Hérent P, Manceron P. Efficient Medical Question Answering with Knowledge-Augmented Question Generation. In: \textit{Proceedings of the 6th Clinical Natural Language Processing Workshop}. Association for Computational Linguistics; 2024:10--20. \doi{10.18653/v1/2024.clinicalnlp-1.2}.
+\end{pubs}
+
+\subsection{Scholarly Perspectives and Scientific Commentary}
+\begin{pubs}[resume]
+\item \me, Messas E. Nobel Prize in physics 2024: John J. Hopfield and Geoffrey E. Hinton. From Hopfield and Hinton to AlphaFold: The 2024 Nobel Prize honors the pioneers of deep learning. \textit{Médecine/Sciences}. 2025;41(3):277--280. [In French.] \doi{10.1051/medsci/2025036}.
+\item \me. History and vision of artificial intelligence. \textit{Médecine/Sciences}. 2024;40(3):283--286. [In French.] \doi{10.1051/medsci/2024022}.
+\item \me, Gaudet C, Varennes O, Vellas D. Scientific news selected by AMPS students [L'actualité scientifique vue par les étudiants de l'AMPS]. \textit{Médecine/Sciences}. 2018;34(4):313. [In French.] \doi{10.1051/medsci/20183404011}.
+\end{pubs}
+
+\subsection{Preprints (not peer reviewed)}
+\begin{pubs}[resume]
+\item Lepoittevin M, Bringer M, Balia M, Bauvin P, \me, Zenasni F, Bodard S. Latent chronic stress: identification and characterization in a preventive medicine cohort. \textit{medRxiv}. 2025. \doi{10.1101/2025.11.21.25340737}.
+\item Etienne L, Bauvin P, \me, Lepoittevin M, Bodard S. Advancing cardiovascular disease risk prediction beyond conventional methods: a systematic review of multimodal machine learning models integrating traditional clinical factors and multi-omics data. \textit{medRxiv}. 2025. \doi{10.1101/2025.10.07.25337473}.
+\item \me, Ohayon S, Laleye F, Bauvin P, Messas E, Bodard S, Tannier X. Is Multimodal Better? A Systematic Review of Multimodal versus Unimodal Machine Learning in Clinical Decision-Making. \textit{medRxiv}. 2025. \doi{10.1101/2025.03.12.25322656}.
+\end{pubs}
+
+\section{Congress Presentations}
+\subsection{Talks, posters and chaired sessions}
+\pres{October 2026}{EFMI Special Topic Conference (STC 2026): AI in clinical decision-making and education.}{Oral presentation, Athens, Greece.}
+\pres{October 2026}{DEFEE Congress 2026.}{Oral presentation, France.}
+\pres{September 2026}{25th Congress of the French Society of Vascular Medicine (SFMV).}{Oral presentation, AI workshop and poster, Reims, France.}
+\pres{June 2026}{AIME Paris Congress 2026 (Aesthetic Innovation \& Medical Excellence).}{Oral presentation on artificial intelligence, Palais des Congrès, Paris, France.}
+\pres{June 2026}{Corsica Medical Summit 2026.}{Oral presentation, artificial intelligence session, Ajaccio, France.}
+\pres{March 2026}{French College of Vascular Pathology (CFPV 2026): session “IA-VASC”, SFMV working group on AI.}{Session co-chair, Maison de la Chimie, Paris, France.}
+\pres{March 2026}{Aesthetic \& Anti-Aging Medicine World Congress (AMWC 2026).}{Oral presentation, Monaco.}
+\pres{February 2026}{Intra- and inter-physician variability as a barrier to robust machine learning prediction.}{Poster presentation, Sorbonne Université Doctoral School ED 393 Conference, Saint-Malo, France.}
+\pres{January 2026}{European Days of the French Society of Cardiology (JESFC 2026).}{Oral presentation, Paris, France.}
+\pres{October 2025}{24th Congress of the French Society of Vascular Medicine (SFMV): multimodal AI.}{Oral presentation and AI workshop, Lille, France.}
+\pres{October 2025}{DEFEE Congress 2025: AI in healthcare.}{Oral presentation, Le Touquet-Paris-Plage, France.}
+\pres{September 2025}{Regional vascular medicine association (ARMV).}{AI workshop, Reims, France.}
+\pres{July 2025}{Longevity Summit Dublin 2025.}{Oral presentation, Dublin, Ireland.}
+\pres{June 2025}{AIME Paris Congress 2025 (Aesthetic Innovation \& Medical Excellence).}{Oral presentation, Palais des Congrès, Paris, France.}
+\pres{April 2025}{Belgian Society of Aesthetic Medicine (SBME) Congress: how to use artificial intelligence.}{Oral presentation, Brussels, Belgium.}
+\pres{March 2025}{AMWC 2025: prevention beyond 2025.}{Oral presentation, Monaco.}
+\pres{March 2025}{Gynécologie Obstétrique Pratique (GOP) Congress: AI in gynecology.}{Oral presentation, Palais des Congrès, Paris, France.}
+
+\subsection{Upcoming}
+\pres{March 2027}{French College of Vascular Pathology (CFPV 2027).}{Oral presentation, Paris, France.}
+\pres{March 2027}{European Congress of Internal Medicine (ECIM 2027).}{Abstract submitted, Paris, France.}
+
+\subsection{Invited seminars and lectures}
+\pres{January 2026}{Enjeux Dirigeants: prevention and health for executives.}{Invited talk, Paris, France.}
+\pres{May 2025}{Oxidative stress.}{Lecture, Environmental Medicine University Diploma (DUME).}
+\pres{April 2025}{The use of artificial intelligence in preventive medicine.}{Lecture, Anti-Ageing Medicine University Diploma (DUMAA).}
+\pres{February 2025}{State of the art of artificial intelligence in vascular medicine.}{Departmental presentation, Hôpital Européen Georges-Pompidou, AP-HP, Paris, France.}
+\pres{January 2025}{Introduction to synthetic data.}{Research seminar, LIMICS, Inserm, Paris, France.}
+
+\subsection{Podcasts}
+Le miroir (February 2026); Med in tech (January 2026); Extraterrien (May 2025); Métamorphose (February 2025).
+
+\section{Teaching and Educational Development}
+\textbf{Continuing medical education, Médéré.} Expert instructor for an 8-hour course on artificial intelligence in healthcare for physicians, offered in person and online.\par\vspace{4pt}
+\textbf{AI workshops and university teaching.} Workshops at the SFMV Congress (October 2025 and September 2026) and for the regional vascular medicine association in Reims (September 2025); lectures for the DUMAA (April 2025) and DUME (May 2025) university diplomas.
+\entry{Co-founder, Freecn.io}{June 2020--January 2024}
+Developed a nonprofit medical education platform for preparation for the French national residency examination. Built a team of more than 25 volunteers; the platform served more than 15,000 medical students.
+\entry{Project Manager Trainee, Centre de Recherches Interdisciplinaires}{April--September 2019}
+Developed machine learning training initiatives for healthcare professionals with Olivier Bory and Cloé Brami, Paris, France.
+
+\section{Academic and Professional Service}
+\entry{Resident Representative, Medical Executive Committee}{January 2024--present}
+AP-HP Paris Centre University Hospital Group. Represent medical residents across seven hospitals, including Hôpital Européen Georges-Pompidou.
+\entry{SFMV working group on artificial intelligence}{2025--present}
+Member of the French Society of Vascular Medicine working group on AI; co-chair of its session at the CFPV 2026 congress.
+\par\vspace{5pt}
+\textbf{Editorial and peer-review service.} Editorial board member, \textit{Médecine/Sciences}; reviewer, \textit{European Journal of Preventive Cardiology}.
+\entry{Leadership in Physician-Scientist Associations}{2017--2019}
+Board member, European MD/PhD Association (November 2017--January 2019); central bureau member, Association Nationale des Doubles Cursus en Santé (June 2017--June 2019).
+
+\section{Research Methods and Technical Skills}
+\textbf{Programming:} Python, R, MATLAB; version control and model deployment.\par\vspace{2pt}
+\textbf{Machine learning:} regression, random forests, gradient boosting / XGBoost, clustering, neural networks and transformers; synthetic data generation and evaluation.\par\vspace{2pt}
+\textbf{Clinical data analysis:} data integration and cleaning, feature engineering, missing-data handling, visualization, cross-validation and held-out model evaluation.\par\vspace{2pt}
+\textbf{Evidence synthesis:} systematic reviews, multimodal model comparison and PROBAST risk-of-bias assessment.\par\vspace{2pt}
+\textbf{Languages:} French (native); English (professional working proficiency).
+
+\section{Additional Training}
+2025: VASCERN Summer School on Rare Vascular Diseases.\par
+2017--2018: Certificate in Political Science, Sciences Po Toulouse.
+
+\section{Academic References}
+\textbf{Prof.\ Xavier Tannier.} Professor, Sorbonne Université; LIMICS, Inserm.\\
+\href{mailto:xavier.tannier@sorbonne-universite.fr}{xavier.tannier@sorbonne-universite.fr}\par\vspace{4pt}
+\textbf{Prof.\ Emmanuel Messas.} Head of Vascular Medicine, Hôpital Européen Georges-Pompidou, AP-HP.\\
+\href{mailto:emmanuel.messas@aphp.fr}{emmanuel.messas@aphp.fr}
+
+\end{document}
